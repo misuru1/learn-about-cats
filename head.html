@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="">
+    <title>Cat</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+ 
+	<style type="text/css">
+		body{
+			font-family: 'Mitr', sans-serif;
+		}
+	</style>
+</head>
+<body background="bg3.jpg" onload="startTime()">
+    <center><img src="cat head1.png" width="18%"></center>
+        <table border="0" align="center" width="50%" height="40%">
+            <tr>
+                <td>
+                    <div id="txt"></div>
+
+                    <script>
+                    function startTime() {
+                      const today = new Date();
+                      let h = today.getHours();
+                      let m = today.getMinutes();
+                      let s = today.getSeconds();
+                      m = checkTime(m);
+                      s = checkTime(s);
+                      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+                      setTimeout(startTime, 1000);
+                    }
+                    
+                    function checkTime(i) {
+                      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                      return i;
+                    }
+                    </script> 
+                <td bgcolor="ffa69e" align="center"><font size="5"> เรื่องน่ารู้เกี่ยวกับน้องเหมียว＾• ω •＾ </td></font>
+                <td><a href="http://guestscounter.com"><img src="http://guestscounter.com/count.php?c_style=7&id=1706167466" border=0 alt="counter widget"></a><br>
+            </tr>
+        </table>
+        <span id="date"></span>
+         
+        
+</body>
+</html>
